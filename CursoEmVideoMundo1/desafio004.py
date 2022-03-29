@@ -1,0 +1,6 @@
+algo = input('Entre com algo: ')
+print('Tipo Primitivo: ',type(algo))
+print('Numero: ',algo.isnumeric())
+print('Alfanumerico: ',algo.isalpha())
+print('Deciomal: ',algo.isdigit())
+print('Maiusculo: ',algo.isupper())
