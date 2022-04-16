@@ -1,0 +1,36 @@
+# As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe
+# contraram para desenvolver o programa que calculará os reajustes.
+#
+#     Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério,
+#     baseado no salário atual:
+
+#     salários até R$ 280,00 (incluindo) : aumento de 20%
+#     salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+#     salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+#     salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela:
+#     o salário antes do reajuste;
+#     o percentual de aumento aplicado;
+#     o valor do aumento;
+#     o novo salário, após o aumento.
+
+salario = float(input('Entre com o salario R$ '))
+if salario < 280:
+    salario_reajustado = salario+((salario * 20)/100)
+    percentual = 20
+    vr_aumento = (salario * 20)/100
+elif salario >= 280 and salario <= 700:
+    salario_reajustado = salario + ((salario * 15) / 100)
+    percentual = 15
+    vr_aumento = (salario * 15) / 100
+elif salario >= 700 and salario <= 1500:
+    salario_reajustado = salario + ((salario * 10) / 100)
+    percentual = 10
+    vr_aumento = (salario * 10) / 100
+else:
+    salario_reajustado = salario + ((salario * 5) / 100)
+    percentual = 5
+    vr_aumento = (salario * 5) / 100
+print(f'Salario antes do reajuste: R${salario}')
+print(f'Percentual de aumento aplicado {percentual}%')
+print(f'Valor do aumento R${vr_aumento}')
+print(f'Salario após o reajuste: R${salario_reajustado}')
